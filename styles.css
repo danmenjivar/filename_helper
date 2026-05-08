@@ -1,0 +1,39 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#65748b;
+  --accent:#0066ff;
+  --radius:12px;
+  --max-width:760px;
+  --gap:16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#eef3fb);
+  color:#0f1724;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:var(--max-width);margin:48px auto;padding:0 20px}
+.header h1{margin:0 0 6px;font-size:1.6rem}
+.subtitle{margin:0;color:var(--muted);font-size:0.95rem}
+
+.card{background:var(--card);border-radius:var(--radius);padding:20px;margin-top:18px;box-shadow:0 6px 30px rgba(22,40,80,0.06)}
+.form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:var(--gap)}
+.form-row label{font-weight:600;color:#0b1220}
+input[type="month"], textarea{width:100%;padding:10px 12px;border:1px solid #e6eaf0;border-radius:8px;font-size:0.95rem}
+textarea{resize:vertical;min-height:120px}
+
+.actions{display:flex;justify-content:flex-end}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(.95)}
+
+.output{margin-top:18px}
+.output h2{margin:0 0 8px;font-size:1rem}
+.generated-list{background:#f8fafc;border:1px dashed #e6eefc;padding:12px;border-radius:8px;min-height:48px;white-space:pre-wrap;color:#0b1220}
+
+@media (max-width:520px){.container{margin:24px 12px}.header h1{font-size:1.25rem}}

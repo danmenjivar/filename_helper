@@ -1,6 +1,3 @@
-
-// TODO figure out if month is ending in trimester if so extra filename thrown in with special naming
-
 let filenames = [
     'Account_Statement',
     'Check_Register',
@@ -17,7 +14,7 @@ document.querySelector("#generate").addEventListener("click", (event) => {
     formFileNames();
 });
 
-function setCurrentMonth() {
+function setCurrentMonth() { // current month is on purpose previous month, since we are generating file names for the month that just ended
     let date = new Date();
     let month = `${date.getMonth()}`.padStart(2, '0');
     let year = date.getFullYear();

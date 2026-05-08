@@ -5,19 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounting File Name Helper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Accounting File Name Helper</h1>
-    <label for="month">Month:</label>
-    <input type="month" id="month" placeholder="yyyy-mm" />
-    <div>
-        <label for="filenames">Enter filenames, one per line:</label>
-        <textarea id="filenames" name="filenames" rows="5" cols="33">
-        </textarea>
+    <div class="container">
+        <header class="header">
+            <h1>Accounting File Name Helper</h1>
+            <p class="subtitle">Quickly prefix filenames with the selected accounting month.</p>
+        </header>
+
+        <main class="card">
+            <div class="form-row">
+                <label for="month">Month</label>
+                <input type="month" id="month" placeholder="yyyy-mm" />
+            </div>
+
+            <div class="form-row">
+                <label for="filenames">Filenames (one per line)</label>
+                <textarea id="filenames" name="filenames" rows="6" placeholder="Enter filenames, e.g. Account_Statement"></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="generate" class="btn">Generate</button>
+            </div>
+
+            <section id="output" class="output">
+                <h2>Generated filenames</h2>
+                <div id="generated_filenames" class="generated-list" aria-live="polite"></div>
+            </section>
+        </main>
     </div>
-    <button id="generate">Generate</button>
-    <p id="generated_filenames"></p>
 
     <script src="./script.js"></script>
 </body>
