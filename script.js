@@ -1,11 +1,11 @@
 let filenames = [
     'Account_Statement',
     'Check_Register',
-    'Deposits',
-    'S-24',
-    'S-26',
-    'S-30',
-    'TO-62',
+    'Deposited_Contribution_Receipts',
+    'S-24_Collected_Contributions',
+    'S-26_Accounts_Sheet',
+    'S-30_Monthly_Accounts_Report',
+    'TO-62_Funds_Transfer',
     'WF_Bank_Statement',
     'Donation_Ack'
 ]
